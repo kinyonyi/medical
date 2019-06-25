@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+<!--head -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+<!--title-->
+{% block title %}welcome{% endblock %}
+
+<!--header info-->
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+<!--section -->
+{% block section %}
+    <section>
+        <div class="container">
+            <div id="user_login_select">
+                <div id ="login">
+                    <p>LOGIN HERE</p>
+                    <button type = "button" onclick = "admin()">ADMIN LOGIN</button>
+                    <script type="text/javascript">
+                        function admin(){
+                            window.location = '/admin';
+                            document.write("Redirecting to the login page, please wait...");
+                            setTimeout(admin, 100);
+                        }
+                    </script>
+                    <button onclick="doc()">DOC LOGIN</button>
+                    <script type="text/javascript">
+                        function doc(){
+                            window.location = '/doc';
+                            document.write("Redirecting to the login page, please wait...");
+                            setTimeout(doc, 100);
+                        }
+                    </script>
+                    <button onclick="user()">USER LOGIN</button><br>
+                    <script type="text/javascript">
+                        function user(){
+                            window.location = '/user';
+                            document.write("Redirecting to the login page, please wait...");
+                            setTimeout(user, 100);
+                        }
+                    </script>
+                    <a href="{{ url_for('register_user')}}">No account, Register Here (users only)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

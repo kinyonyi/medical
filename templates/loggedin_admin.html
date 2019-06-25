@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!--header -->
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block title %}Welcome Admin{% endblock %}
+
+{% block mainnav %}
+<div class="container">
+    <div class ="main_nav">
+        <ul>
+            <li><a href="{{url_for('register_doc')}}">ADD DOCTOR</a></li>
+            <li><a href="{{url_for('view_doctor')}}">VIEW DOCTOR</a></li>
+            <li><a href="{{url_for('view_user')}}">VIEW USER</a></li>
+            <li><a href="{{url_for('messages_admin')}}"">MESSAGES</a></li>
+            <li><a href="{{url_for('dropSessionAdmin')}}">LOGOUT</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock%}
+
+{% block section %}
+<div class="container">
+    <div class="every_info">
+        <div class="every_info_image">
+            <img src="/static/images/doctor.jpg" alt="doctor image">
+            {% block adds %}
+            {% endblock %}
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

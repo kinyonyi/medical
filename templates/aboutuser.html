@@ -1,0 +1,35 @@
+{% extends "loggedin_user.html" %}
+<!--head -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+<!--title-->
+{% block title %}About Us{% endblock %}
+
+{% block section %}
+	<div class="container">
+	    <div class="every_info">
+	        <img src="/static/images/doctor.jpg">
+	        <div id="padding">
+	        	<div class="about">
+	        		<h1>Kibuku Health Center 4</h1>
+	        		<p>We are delighted to inform the whole Nation at large that we offer execellent Medical services ranging from minor to complex conditions. </p>
+	        		<p>We have extremely qualified medical personnel that are always avaialble in the event of emergencies and a 24hr Ambulance available to.</p>
+	        		<h1>Services Offered</h1>
+	        		<p>We offer a variety of Medical Services to the public at discounted rates though ensuring quality. This is due to the highly efficient Medical equipment owned by the Hospital</p>
+	        		<p>Among them include the following;</p>
+	        		<ol>
+	        			<li>ANC-antenatal Care</li>
+	        			<li>SMC-Safe Male Circumcission </li>
+	        			<li>Inpatient Services </li>
+	        			<li>Maternity</li>
+	        			<li>Delivery Services</li>
+	        			<li>General Services</li>
+	        		</ol>	
+	        		<h1>Founders</h1>
+	        		<p>The Hospital is Government owned.</p><br>
+	        	</div>
+	        </div>
+	    </div>
+	</div>
+{% endblock %}

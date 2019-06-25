@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<!--header -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block title %}Welcome doc{% endblock %}
+
+{% block mainnav %}
+    <div class="container">
+        <div class = "main_nav">
+            <ul>
+                <li><a href="{{url_for('doc_logged')}}">DETAILS</a></li>
+                <li><a href="{{url_for('view_user_doc')}}">VIEW USER</a></li>
+                <li><a href="{{url_for('messages')}}">MESSAGES</a></li>
+                <li><a href="{{url_for('message_to_admin')}}">CONTACT ADMIN</a></li>
+                <li><a href="{{url_for('chat')}}">CHAT</a></li>
+                <li><a href="{{url_for('dropSessionDoc')}}">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block section %}
+<div class="container">
+    <div class="every_info">
+        <img src="/static/images/doctor.jpg">
+            {% block adds %}
+            {% endblock %}
+        <div id="padding">
+            <div class="formdoc">
+                {% for doc_id, fname, lname, qualification, telephone, email in doc_logged %}
+                    <h1>Details</h1>
+                    <p>Doctor id : {{ doc_id }} </p>
+                    <p>Name : {{ fname.title() }} {{ lname.title() }}</p>
+                    <p>Type : {{ qualification.title() }}</p>
+                <form action="\doc_logged" method="POST">
+                    <label>Mobile number</label>
+                    <input type="text" value= "{{ telephone }}" name = "telephone">
+                    <label>Email ID </label>
+                    <input type="text" value = "{{ email }}" name = "email">
+                    <input type="submit" value="Update">
+                </form>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

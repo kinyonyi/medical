@@ -1,0 +1,505 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+.header{
+    position: relative;
+    background: url(/static/images/background_main.jpeg);
+    background-size: cover;
+    border-bottom: 1px solid red;
+    overflow: hidden;
+    height: 20vh;
+}
+.logo img{
+    position: absolute;
+    height: 100%;
+}
+.logo h1{
+    color: rgba(31, 53, 31, 0.8);
+    font-size: 6vw;
+    position: absolute;
+    top: 5%;
+    left: 38%;
+}
+.main_nav{
+    background-color: rgba(61, 50, 50, 0.5);
+    overflow: hidden;
+}
+.main_nav a{
+    text-decoration: none;
+    color: white;
+}
+.main_nav ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.main_nav ul li{
+    color: white;
+    list-style: none;
+    font-size: 1.3vw;
+    padding: 20px;
+    float: left;
+}
+.main_nav ul li:hover{
+    background-color: red;
+}
+#user_login_select{
+    background: url(/static/images/healthcare.jpg);
+    background-size: cover;
+    padding: 2vw;
+    box-sizing: border-box;
+    position: relative;
+}
+#login{
+    color: white;
+    text-align: centre;
+    background-color: rgba(14, 10, 10, 0.3);
+    box-shadow: 0 0 15px rgba(14,41,67,1), 0 2px 5px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 50vh;
+    width: 70%;
+    margin: auto;
+}
+#login a{
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    top: 21vw;
+    left: 35vw;
+}
+#login a:hover{
+    color: red;
+}
+#login p{
+    position: absolute;
+    background-color: rgba(31, 53, 31, 0.7);
+    box-sizing: border-box;
+    padding: 6px;
+    border: 1px solid white;
+    font-size: 2vw;
+    left: 42%;
+    top: 20%;
+}
+#login button{
+    font-size: 1vw;
+    font-weight: 800;
+    padding: 1.5vw;
+    border-radius: 2vw;
+    display: inline-block;
+    margin-left: 6vw;
+    margin-top: 25vh;
+}
+#login button:hover{
+    background-color: rgba(61, 50, 50, 0.3);
+    border: none;
+    color: white;
+}
+/*form data*/
+.form_data{
+    background: url(/static/images/healthcare.jpg);
+    background-size: cover;
+    padding: 2vw;
+    box-sizing: border-box;
+    position: relative;
+}
+.form{
+    box-shadow: 0 0 15px rgba(14,41,57,0.12), 0 2px 5px;
+    background-color: rgba(56, 53, 53, 0.6);
+    width: 50%;
+    border: 1px solid black;
+    margin: auto;
+    padding: 1vw;
+}
+.form_data h1{
+    text-align: center;
+    font-size: 2vw;
+    color: blue;
+}
+.form label{
+    color: white;
+    font-size: 1.5vw;
+}
+.form input[type = "text"], .form input[type = "password"]{
+    font-size: 1vw;
+    height: 5vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(14,41,57,0.12), 0 2px 5px;
+}
+.form input[type = "text"]:focus{
+    border-color: blue;
+    box-shadow: 0 0 15px rgba(14,41,57,0.12), 0 2px 5px;
+}
+.form input[type = "password"]:focus{
+    border-color: blue;
+    box-shadow: 0 0 15px rgba(14,41,57,0.12), 0 2px 5px;
+}
+.form input[type = "submit"]{
+    font-size: 1.5vw;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 16vw;
+    margin-top: 2vh;
+    width: 10vw;
+}
+.form input[type = "submit"]:hover{
+    background-color: rgba(31, 53, 31, 0.7);
+    color: white;
+}
+.every_info{
+    background: url(/static/images/healthcare.jpg);
+    background-size: cover;
+    position: relative;
+    height: 83vh;
+}
+.every_info img{
+    position: absolute;
+    top: 0;
+    width: 32%;
+    height: 100%;
+}
+.every_info h1{
+    text-align: center;
+    color: white;
+}
+.every_info p, label{
+    color: white;
+    font-size: 1vw;
+}
+#padding{
+    padding: 2vh;
+}
+.formadmin{
+    overflow-y: scroll;
+    height: 75.5vh;
+    margin-left: 38%;
+    background-color: rgba(56, 53, 53, 0.6);
+    width: 50%;
+    border: 1px solid black;
+    padding: 1vw;
+}
+.formdadmin label{
+    color: white;
+    font-size: 1.5vw;
+}
+.formadmin input[type = "text"], input[type = "password"], input[type = "email"], input[type="number"]{
+    font-size: 1vw;
+    height: 5vh;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+    width: 100%;
+    border-radius: 10px;
+}
+.formadmin label{
+    color: white;
+    font-size: 1vw;
+}
+.formadmin select{
+    width: 100%;
+    border-radius: 10px;
+    height: 5vh;
+}
+.formadmin input[type = "submit"]{
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 23%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+/*table area*/
+.table_area{
+    margin-left: 36%;
+    background-color: rgba(56, 53, 53, 0.6);
+    width: 60%;
+    height: 76vh;
+    padding: 1vw;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+.table_area caption{
+    color: white;
+    font-size: 150%;
+    margin: 1% 0 3% 0;
+}
+.table_area table, th, td{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.table_area th{
+    background-color: rgb(49, 45, 45);
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+}
+.table_area table{
+    font-size: 1vw;
+    border-collapse: collapse;
+    margin: auto;
+}
+.table_area tr:nth-child(even){
+    color: greenyellow;
+}
+.table_area tr:nth-child(odd){
+    color: white;
+    background-color: rgb(49, 45, 45);
+}
+.formdoc{
+    margin-left: 34%;
+    background-color: rgba(56, 53, 53, 0.6);
+    width: 60%;
+    height: 76vh;
+    padding: 1vw;
+}
+.formdoc p, h1, label{
+    color: white;
+    font-size: 2vw;
+}
+.formdoc input[type = "text"], input[type = "password"], input[type = "email"], input[type="number"], input[type = "select"]{
+    font-size: 1.5vw;
+    height: 5vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    width: 100%;
+    border-radius: 10px;
+}
+.formdoc input[type = "submit"]{
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-top: 2vh;
+    font-size: 1vw;
+    width: 20%;
+}
+.formuser{
+    margin-left: 34%;
+    background-color: rgba(56, 53, 53, 0.6);
+    width: 60%;
+    height: 76vh;
+    padding: 1vw;
+    position: relative;
+}
+.formuser p, h1, label{
+    color: white;
+    font-size: 2vw;
+}
+.formuser input[type = "text"], input[type = "password"], input[type = "email"], input[type="number"], input[type = "select"]{
+    font-size: 1.5vw;
+    height: 5vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    width: 100%;
+    border-radius: 10px;
+}
+.formuser textarea{
+    margin-top: 1%;
+    color: blue;
+    width: 100%;
+    height: 5vw;
+}
+.formuser input[type = "submit"]{
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-top: 2vh;
+    font-size: 1vw;
+    width: 20%;
+}
+.formuser input[type = "submit"]:hover{
+    background-color: green;
+    color: white;
+}
+.formuser input[type = "checkbox"]{
+    margin-left: 4.5vw;
+}
+#side{
+    position: absolute;
+    left: 50%;
+    top: 22%;
+}
+#user{
+    color: yellow;
+}
+#user2{
+    color: yellow;
+    font-size: 1.5vw;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: white;
+}
+.form_messages{
+    margin-left: 34%;
+    background-color: rgba(56, 53, 53, 0.6);
+    width: 60%;
+    height: 76vh;
+    padding: 1vw;
+    overflow-y: scroll;
+    margin-bottom: 40px;
+}
+.form_messages i{
+    color: yellow;
+}
+.form_messages b{
+    color: white;
+}
+.form_messages form{
+    border-bottom: 1px solid white;
+    margin: 0 0 5% 0;
+}
+.form_messages form textarea{
+    width: 80%;
+    height: 15vh;
+    color: blue;
+    font-size: 120%;
+    padding: 1%;
+}
+.form_messages form em{
+    color: white;
+    margin: 0 0 0 3%;
+}
+.form_messages input[type = "email"]{
+    width: 50%;
+    color: blue;
+}
+.form_messages form input[type = "submit"]{
+    padding: 6px;
+    margin: 2% 0 2% 0;
+}
+.form_messages form input[type = "submit"]:hover{
+    background-color: green;
+    color: white;
+}
+.form_message_to_admin{
+    margin-left: 34%;
+    background-color: rgba(56, 53, 53, 0.6);
+    width: 60%;
+    height: 76vh;
+    padding: 1vw;
+    margin-bottom: 40px;
+}
+.form_message_to_admin label{
+   color: white;
+}
+.form_message_to_admin input[type = "text"], input[type = "email"]{
+    width: 100%;
+    height: 5vh;
+    border-bottom: 1px solid white;
+    font-size: 3vh;
+    color: black;
+    padding-left: 2%;
+    border-radius: 10px;
+}
+.form_message_to_admin form textarea{
+    width: 80%;
+    height: 15vh;
+}
+.form_message_to_admin form input[type = "submit"]{
+    padding: 6px;
+    margin: 2% 0 2% 0;
+}
+.form_message_to_admin form input[type = "submit"]:hover{
+    background-color: green;
+    color: white;
+}
+.form_message_to_admin p{
+    margin: 0 0 1% 0;
+    font-size: 1.2vw;
+}
+.padding2{
+    padding: 7%;
+}
+.form_messages_admin{
+    margin-left: 34%;
+    background-color: rgba(56, 53, 53, 0.6);
+    width: 60%;
+    height: 76vh;
+    padding: 1vw;
+    overflow-y: scroll;
+    margin-bottom: 40px;
+    overflow-y: scroll;
+}
+.form_messages_admin textarea{
+    border: none;
+    background: transparent;
+    color: white;
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: darkred;
+}
+.form_messages_admin p, i{
+    color: white;
+}
+.chat{
+    position: fixed;
+    top: 250px;
+    right: 15%;
+}
+.chat b{
+    color: white;
+}
+.chat input[type = "text"]{
+    width: 100%;
+    padding: 2px;
+    height: 2vw;
+    font-size: 10px;
+    margin-bottom: 0.1vw;
+}
+.chat input[type = "text"]:focus{
+    border-color: green;
+}
+.chat button{
+    margin-top: 10px;
+    background-color: green;
+    width: 10vw;
+    color: white;
+    padding: 2px;
+    border-radius: 20px;
+}
+.message_holder{
+    width: 60%;
+}
+.about{
+    margin-left: 34%;
+    background-color: rgba(56, 53, 53, 0.1);
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+    width: 60%;
+    height: 76vh;
+    padding: 0.5vw;
+}
+.about h1{
+    background-color: grey;
+}
+.about p{
+    background-color: white;
+    color: black;
+    padding: 0.5vw;
+}
+.about ol{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+.about ol li{
+    margin-left: 50px;
+    padding: 0.5vw;}
+footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 1%;
+}

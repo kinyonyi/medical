@@ -1,0 +1,30 @@
+{% extends 'loggedin_doc.html' %}
+
+{% block title %}messages{% endblock %}
+
+{% block section %}
+<div class="container">
+    <div class="every_info">
+        <img src="/static/images/doctor.jpg">
+        <div id="padding">
+            <div class ="form_message_to_admin">
+                <div class="padding2">
+                    <form action = "/message_to_admin" id="message_admin" method="POST">
+                        {% for fname, lname, email in details %}
+                            <label>Firstname</label>
+                            <input type="text" value= "{{ fname }}" name="fname">
+                            <label>Lastname</label>
+                            <input type="text" value= "{{ lname }}" name="lname">
+                            <label>Email</label>
+                            <input type="email" value= "{{ email }}" name="email">
+                            <p>MESSAGE BODY</p>
+                            <textarea form="message_admin" name = "textarea"></textarea><br>
+                            <input type="submit" value = "SEND MESSAGE">
+                        {% endfor %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

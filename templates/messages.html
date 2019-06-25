@@ -1,0 +1,50 @@
+{% extends 'loggedin_doc.html' %}
+
+{% block title %}messages{% endblock %}
+
+{% block section %}
+<div class="container">
+    <div class="every_info">
+        <img src="/static/images/doctor.jpg">
+        <div id="padding">
+            <div class="form_messages">
+            	{% for id, cough, headache, fever, stomach_pain, lower,vomiting,diarrhea, flue,chestpain, others, email in x %}
+            		<p>Greetings doctor. I have the folloing symptoms.</p>
+            		<i><b>Cough:</b> {{ cough }}</i><br>
+            		<i><b>headache:</b> {{ headache }}</i><br>
+            		<i><b>Fever:</b> {{ fever }}</i><br>
+            		<i><b>Stomach pain:</b> {{ stomach_pain }}</i><br>
+            		<i><b>Lower abdominal pains:</b> {{ lower }}</i><br>
+            		<i><b>Vomiting:</b> {{ vomiting }}</i><br>
+            		<i><b>Diarrhea:</b> {{ diarrhea }}</i><br>
+            		<i><b>Flue:</b> {{ flue }}</i><br>
+            		<i><b>Chest pains:</b> {{ chestpain }}</i><br>
+            		<i>Others Conditions not specified:</i>
+            		<p>{{ others }}</p>
+            		<i>My email address is </i>
+            		<a href = "{{url_for('messages')}}"> <p>{{email}} </p></a>
+            		<form action="\email" method="POST">
+                        <label>email</label>
+                        <input type="email" name="email" value="{{ email }}">
+            			<textarea name = "body" placeholder="email message body"></textarea><br>
+            			<input type="submit" value="Reply via mail">
+            			<em>N.B: Upon reply, the message is discarded. </em>
+            		</form>
+            	{% endfor %}
+                
+                    {% block flash %}
+                    {% with messages = get_flashed_messages(with_categories=True) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="{{ category }}">
+                                    <li>{{ message }}</li>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

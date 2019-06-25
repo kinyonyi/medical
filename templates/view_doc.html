@@ -1,0 +1,35 @@
+{% extends 'loggedin_admin.html' %}
+
+{% block adds %}
+<div id="padding">
+        <div class="table_area">
+            <table>
+                <caption>Registered System Users</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>DOC ID</th>
+                    <th>DOC TYPE</th>
+                    <th>FIRSTNAME</th>
+                    <th>LASTNAME</th>
+                    <th>PASSWORD</th>
+                    <th>QUALIFICATION</th>
+                    <th>TELEPHONE</th>
+                    <th>EMAIL</th>
+                </tr>
+                {% for id, doc_id, doc_type, firstname, lastname, password, qualification, telephone, email in td %}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{doc_id}}</td>
+                        <td>{{doc_type}}</td>
+                        <td>{{firstname}}</td>
+                        <td>{{lastname}}</td>
+                        <td>{{password}}</td>
+                        <td>{{qualification}}</td>
+                        <td>{{telephone}}</td>
+                        <td>{{email}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'loggedin_admin.html' %}
+
+{% block adds %}
+<div id="padding">
+    <div class="formadmin">
+        <form action="/register_doc" method="POST">
+            <h1>ADD DOCTOR</h1>
+            <label>DOC ID</label>
+            <input type="text" name="doc_id">
+            <label>DOC TYPE</label>
+            <select name="type_doc">
+                <option>general_physician</option>
+                <option>bones</option>
+                <option>women</option>
+            </select>
+            <label>FIRST NAME</label>
+            <input type="text" name="firstname">
+            <label>LAST NAME</label>
+            <input type="text" name="lastname">
+            <label>PASSWORD</label>
+            <input type="password" name="password">
+            <label>QUALIFICATION</label>
+            <input type="text" name="qualification">
+            <label>TELEPHONE</label>
+            <input type="number" name="telephone">
+            <label>EMAIL</label>
+            <input type="email" name="email">
+            <input type="submit" value="SUBMIT">
+            <input type="submit" value="RESET">
+        </form>
+    </div>
+{% endblock %}

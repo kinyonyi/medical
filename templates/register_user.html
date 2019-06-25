@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+<!--header -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block title %}User Registration{% endblock %}
+
+{% block nav %}
+    {{ super() }}
+{% endblock %}
+
+{% block section %}
+<div class="container">
+    <div class="form_data">
+        <div class="form">
+            {% block flash%}
+                {{ super() }}
+            {% endblock %}
+            <h1>PATIENT REGISTRATION</h1>
+            <form action="/register_user" method="POST">
+                <label>Firstname</label>
+                <input type="text" name = "fname">
+                <label>Lastname</label>
+                <input type="text" name = "lname">
+                <label>Password</label>
+                <input type="password" name = "pword">
+                <label>Telephone</label>
+                <input type="number" name = "telephone">
+                <label>Email</label>
+                <input type="email" name = "email">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

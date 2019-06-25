@@ -1,0 +1,23 @@
+{% extends 'loggedin_admin.html' %}
+
+{% block title %}admin messages{% endblock %}
+
+{% block section %}
+<div class="container">
+    <div class="every_info">
+        <img src="/static/images/doctor.jpg">
+        <div id="padding">
+            <div class="form_messages_admin">
+            	{% for id, fname, lname, email, message in x %}
+            		<p>Sender</p>
+            		<i> {{ fname }} {{ lname }}</i>
+                    <p>Email</p>
+            		<i> {{ email }}</i>
+                    <p>Message Body</p>
+        			<textarea>{{ message }}</textarea><br>
+            	{% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

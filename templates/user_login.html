@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!--header -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block title %}User login{% endblock %}
+
+{% block nav%}
+    {{ super() }}
+{% endblock %}
+
+{% block section %}
+<div class="container">
+    <div class="form_data">
+        <div class="form">
+            <h1>USER LOGIN</h1>
+            <form action="/user" method="POST">
+                <label>Firstname</label>
+                <input type="text" name = "fname">
+                <label>Password</label>
+                <input type="password" name = "pword">
+                <input type="submit" value="LOGIN" >
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

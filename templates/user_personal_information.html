@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+<!--header -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block title %}Welcome user{% endblock %}
+
+{% block mainnav %}
+<div class="container">
+    <div class ="main_nav">
+        <ul>
+            <li><a href="{{url_for('user_information')}}">PERSONAL INFORMATION</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">CONTACT US</a></li>
+            <li><a href="{{url_for('chatuser')}}">CHAT</a></li>
+            <li><a href="{{url_for('dropSessionUser')}}">LOGOUT</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock%}
+
+{% block section %}
+<div class="container">
+	<div class="every_info">
+     	<div class="every_info_image">
+            <img src="/static/images/doctor.jpg" alt="doctor image">
+     	</div>
+     	<div id="padding">
+     		<div class="formdoc">
+                {% for id ,fname, lname, password, telephone, email in user_logged %}
+                    <h1>Details</h1>
+                    <p>Firstname : {{ fname }} </p>
+                    <p>Lastname : {{ lname.title() }}</p>
+                <form action="/user_information" method="POST">
+                    <label>password</label>
+                    <input type="text" value= "{{ password }}" name = "password">
+                     <label>Mobile number</label>
+                    <input type="text" value= "{{ telephone }}" name = "telephone">
+                    <label>Email</label>
+                    <input type="text" value = "{{ email }}" name = "email">
+                    <input type="submit" value="Update">
+                </form>
+                {% endfor %}
+            </div>
+     	</div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+<!--header -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block title %}Welcome user{% endblock %}
+
+{% block mainnav %}
+<div class="container">
+    <div class ="main_nav">
+        <ul>
+            <li><a href="{{url_for('user_information')}}">PERSONAL INFORMATION</a></li>
+            <li><a href="{{url_for('aboutuser')}}">ABOUT US</a></li>
+            <li><a href="{{url_for('contactuser')}}">CONTACT US</a></li>
+            <li><a href="{{url_for('chatuser')}}">CHAT</a></li>
+            <li><a href="{{url_for('dropSessionUser')}}">LOGOUT</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock%}
+
+{% block section %}
+<div class="container">
+	<div class="every_info">
+     	<div class="every_info_image">
+            <img src="/static/images/doctor.jpg" alt="doctor image">
+     	</div>
+     	<div id="padding">
+			<div class="formuser">
+				<h1>Welcome {{ username.title() }}</h1>
+				<p id="user">Please complete the form accurately to recieve professional medical assistance.</p>
+				<form action = "/user_logged" id = "userform" method = "POST">
+					<label>Cough</label>
+					<input type = "radio" value = "Cough" name = "Cough"> <i class="red">Yes</i>
+					<input type = "radio" value = "NONE" name = "Cough"> <i class="blue">No</i><br>
+					<label>Headache</label>
+					<input type = "radio" value = "Headache" name = "Headache"><i class="red">Yes</i>
+					<input type = "radio" value = "NONE" name = "Headache"><i class="blue">No</i><br>
+					<label>Fever</label>
+					<input type = "radio" value = "Fever" name = "Fever"><i class="red">Yes</i>
+					<input type = "radio" value = "NONE" name = "Fever"><i class="blue">No</i><br>
+					<label>Stomach pain</label>
+					<input type = "radio" value = "Stomach pain" name = "stomachpain"><i class="red">Yes</i>
+					<input type = "radio" value = "NONE" name = "stomachpain"><i class="blue">No</i><br>
+					<label>Lower Abdominal pain</label>
+					<input type = "radio" value = "Lower abdominal pain" name = "LowerAbdominalPain"><i class="red">Yes</i>
+					<input type = "radio" value = "NONE" name = "LowerAbdominalPain"><i class="blue">No</i><br>
+					<div id="side">
+						
+						<label>Vomiting</label>
+						<input type = "radio" value = "Vomiting" name = "Vomiting"><i class="red">Yes</i>
+						<input type = "radio" value = "NONE" name = "Vomiting"><i class="blue">No</i><br>
+						
+						<label>Diarrhea</label>
+						<input type = "radio" value = "Diarhea" name = "Diarrhea"><i class="red">Yes</i>
+						<input type = "radio" value = "NONE" name = "Diarrhea"><i class="blue">No</i><br>
+						
+						<label>Flue</label>
+						<input type = "radio" value = "Flue" name = "Flue"><i class="red">Yes</i>
+						<input type = "radio" value = "NONE" name = "Flue"><i class="blue">No</i><br>
+						
+						<label>Chest pain</label>
+						<input type = "radio" value = "Chest pain" name = "Chest_pain"><i class="red">Yes</i>
+						<input type = "radio" value = "NONE" name = "Chest_pain"><i class="blue">No</i><br>
+					</div>
+					<i id="user2">Add any other information that will aid medical assistance e.g tests conducted and other conditions not described above.</i>
+					<textarea form = "userform" name="other_comments"></textarea><br>
+
+					<input type="checkbox" name="type" value="general_physician">
+					<label>General physician</label>
+					<input type="checkbox" name="type" value="women">
+					<label>Women</label>
+					<input type="checkbox" name="type" value="bones">
+					<label>Bones</label>
+					<input type = "submit" value = "Send information">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{{ super() }}
+{% endblock %}
